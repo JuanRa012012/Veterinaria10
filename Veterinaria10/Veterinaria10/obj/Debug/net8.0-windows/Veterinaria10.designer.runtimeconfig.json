@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\JuanRa\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\JuanRa\\.nuget\\packages",
+      "C:\\Users\\Lenovo M720s\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Lenovo M720s\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

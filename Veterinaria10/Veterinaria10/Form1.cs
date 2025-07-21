@@ -23,8 +23,13 @@ namespace Veterinaria10
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Facturas form = new Facturas();
+          Empleado form = new Empleado();
             form.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
