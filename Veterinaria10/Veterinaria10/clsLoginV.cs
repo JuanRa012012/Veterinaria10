@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 
 namespace Veterinaria2
 {
-    class clsLoginV
+    internal class clsLoginV
     {
-        private string conexion = "Data Source=CHRISTINA-PC\\SQLEXPRESS;Initial Catalog=BDVeterinaria;Integrated Security=true";
+        clsConexion clsconexion = new clsConexion();
 
         /// <summary>
         /// Valida un usuario por nombre y contraseña.
@@ -22,7 +22,7 @@ namespace Veterinaria2
         {
             rol = "";
 
-            using (SqlConnection conn = new SqlConnection(conexion))
+            using (SqlConnection conn = new SqlConnection(lsconexion))
             {
                 conn.Open();
                 string query = "SELECT Rol FROM UsuarioSistema WHERE Nombre = @Nombre AND Contraseña = @Contraseña AND Estado = 'Activo'";
