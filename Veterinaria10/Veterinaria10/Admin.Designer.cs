@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
+            btnUser = new Button();
+            btnVeterinarios = new Button();
+            btnEspecies = new Button();
+            btnRazas = new Button();
+            btnServicios = new Button();
+            btnClientes = new Button();
+            btnMascotas = new Button();
             button8 = new Button();
             SuspendLayout();
             // 
@@ -43,82 +43,89 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Courier New", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(186, 24);
             label1.Name = "label1";
             label1.Size = new Size(184, 73);
             label1.TabIndex = 0;
             label1.Text = "MENU";
             // 
-            // button1
+            // btnUser
             // 
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(214, 115);
-            button1.Name = "button1";
-            button1.Size = new Size(122, 48);
-            button1.TabIndex = 1;
-            button1.Text = "GESTIONAR USUARIOS";
-            button1.UseVisualStyleBackColor = true;
+            btnUser.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUser.Location = new Point(214, 115);
+            btnUser.Name = "btnUser";
+            btnUser.Size = new Size(122, 48);
+            btnUser.TabIndex = 1;
+            btnUser.Text = "GESTIONAR USUARIOS";
+            btnUser.UseVisualStyleBackColor = true;
+            btnUser.Click += button1_Click;
             // 
-            // button2
+            // btnVeterinarios
             // 
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(214, 182);
-            button2.Name = "button2";
-            button2.Size = new Size(122, 48);
-            button2.TabIndex = 1;
-            button2.Text = "GESTIONAR VETERINARIOS";
-            button2.UseVisualStyleBackColor = true;
+            btnVeterinarios.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVeterinarios.Location = new Point(214, 182);
+            btnVeterinarios.Name = "btnVeterinarios";
+            btnVeterinarios.Size = new Size(122, 48);
+            btnVeterinarios.TabIndex = 1;
+            btnVeterinarios.Text = "GESTIONAR VETERINARIOS";
+            btnVeterinarios.UseVisualStyleBackColor = true;
+            btnVeterinarios.Click += btnVeterinarios_Click;
             // 
-            // button3
+            // btnEspecies
             // 
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(214, 249);
-            button3.Name = "button3";
-            button3.Size = new Size(122, 48);
-            button3.TabIndex = 1;
-            button3.Text = "GESTIONAR ESPECIES";
-            button3.UseVisualStyleBackColor = true;
+            btnEspecies.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEspecies.Location = new Point(214, 249);
+            btnEspecies.Name = "btnEspecies";
+            btnEspecies.Size = new Size(122, 48);
+            btnEspecies.TabIndex = 1;
+            btnEspecies.Text = "GESTIONAR ESPECIES";
+            btnEspecies.UseVisualStyleBackColor = true;
+            btnEspecies.Click += btnEspecies_Click;
             // 
-            // button4
+            // btnRazas
             // 
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(214, 315);
-            button4.Name = "button4";
-            button4.Size = new Size(122, 48);
-            button4.TabIndex = 1;
-            button4.Text = "GESTIONAR RAZAS";
-            button4.UseVisualStyleBackColor = true;
+            btnRazas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRazas.Location = new Point(214, 315);
+            btnRazas.Name = "btnRazas";
+            btnRazas.Size = new Size(122, 48);
+            btnRazas.TabIndex = 1;
+            btnRazas.Text = "GESTIONAR RAZAS";
+            btnRazas.UseVisualStyleBackColor = true;
+            btnRazas.Click += btnRazas_Click;
             // 
-            // button5
+            // btnServicios
             // 
-            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(214, 384);
-            button5.Name = "button5";
-            button5.Size = new Size(122, 48);
-            button5.TabIndex = 1;
-            button5.Text = "GESTIONAR SERVICIOS";
-            button5.UseVisualStyleBackColor = true;
+            btnServicios.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnServicios.Location = new Point(214, 384);
+            btnServicios.Name = "btnServicios";
+            btnServicios.Size = new Size(122, 48);
+            btnServicios.TabIndex = 1;
+            btnServicios.Text = "GESTIONAR SERVICIOS";
+            btnServicios.UseVisualStyleBackColor = true;
+            btnServicios.Click += btnServicios_Click;
             // 
-            // button6
+            // btnClientes
             // 
-            button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.Location = new Point(214, 449);
-            button6.Name = "button6";
-            button6.Size = new Size(122, 48);
-            button6.TabIndex = 1;
-            button6.Text = "GESTIONAR CLIENTES";
-            button6.UseVisualStyleBackColor = true;
+            btnClientes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClientes.Location = new Point(214, 449);
+            btnClientes.Name = "btnClientes";
+            btnClientes.Size = new Size(122, 48);
+            btnClientes.TabIndex = 1;
+            btnClientes.Text = "GESTIONAR CLIENTES";
+            btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
             // 
-            // button7
+            // btnMascotas
             // 
-            button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button7.Location = new Point(214, 514);
-            button7.Name = "button7";
-            button7.Size = new Size(122, 48);
-            button7.TabIndex = 1;
-            button7.Text = "GESTIONAR MASOTAS";
-            button7.UseVisualStyleBackColor = true;
+            btnMascotas.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMascotas.Location = new Point(214, 514);
+            btnMascotas.Name = "btnMascotas";
+            btnMascotas.Size = new Size(122, 48);
+            btnMascotas.TabIndex = 1;
+            btnMascotas.Text = "GESTIONAR MASOTAS";
+            btnMascotas.UseVisualStyleBackColor = true;
+            btnMascotas.Click += btnMascotas_Click;
             // 
             // button8
             // 
@@ -129,21 +136,22 @@
             button8.TabIndex = 1;
             button8.Text = "SALIR";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGreen;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(547, 617);
             Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnMascotas);
+            Controls.Add(btnClientes);
+            Controls.Add(btnServicios);
+            Controls.Add(btnRazas);
+            Controls.Add(btnEspecies);
+            Controls.Add(btnVeterinarios);
+            Controls.Add(btnUser);
             Controls.Add(label1);
             Name = "Admin";
             Text = "Administrador";
@@ -154,13 +162,13 @@
         #endregion
 
         private Label label1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
+        private Button btnUser;
+        private Button btnVeterinarios;
+        private Button btnEspecies;
+        private Button btnRazas;
+        private Button btnServicios;
+        private Button btnClientes;
+        private Button btnMascotas;
         private Button button8;
     }
 }
