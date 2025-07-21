@@ -1,32 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\",
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\ca_mo\\documentos\\unicah\\ii periodo 2025\\entornos desarrollo visual\\iii parcial\\veterinaria10\\veterinaria10\\veterinaria10\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\facturas listados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\facturas listados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\lenovo m720s\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\clsfacturas listadosconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\clsfacturas listadosconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\",
+  "Documents": [],
+>>>>>>> d768183841a4f2108262d12e6cf0dbcada82b91f
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -74,77 +63,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\Form1.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs*",
-              "RelativeToolTip": "Veterinaria10\\Form1.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:53:44.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs",
               "RelativeDocumentMoniker": "Veterinaria10\\Form1.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Veterinaria10\\Form1.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Veterinaria10\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:53:41.568Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-21T07:17:42.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Facturas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Facturas.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\Facturas.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Facturas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Veterinaria10\\Facturas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:53:40.524Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsFacturas ListadosConexion.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsFacturas ListadosConexion.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\clsFacturas ListadosConexion.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsFacturas ListadosConexion.cs",
-              "RelativeToolTip": "Veterinaria10\\clsFacturas ListadosConexion.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:30:10.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Facturas Listados.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Facturas Listados.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\Facturas Listados.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Facturas Listados.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Veterinaria10\\Facturas Listados.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T09:00:59.848Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "clsConexion.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
+              "DocumentMoniker": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
               "RelativeDocumentMoniker": "Veterinaria10\\clsConexion.cs",
-              "ToolTip": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
+              "ToolTip": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
               "RelativeToolTip": "Veterinaria10\\clsConexion.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T15:45:52.289Z",
+              "WhenOpened": "2025-07-21T07:16:08.993Z",
               "EditorCaption": ""
             }
           ]
