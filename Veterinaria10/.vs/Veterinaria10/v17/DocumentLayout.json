@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\ca_mo\\documentos\\unicah\\ii periodo 2025\\entornos desarrollo visual\\iii parcial\\veterinaria10\\veterinaria10\\veterinaria10\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsConexion.cs",
+              "DocumentMoniker": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
+              "RelativeDocumentMoniker": "Veterinaria10\\clsConexion.cs",
+              "ToolTip": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\Veterinaria10\\clsConexion.cs",
+              "RelativeToolTip": "Veterinaria10\\clsConexion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T23:34:04.258Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -42,10 +64,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }
