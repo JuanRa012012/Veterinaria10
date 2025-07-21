@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\JuanRa\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\juanra\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|c:\\users\\juanra\\documents\\github\\veterinaria10\\veterinaria10\\veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,29 +20,8 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\JuanRa\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\Form1.cs",
-              "ToolTip": "C:\\Users\\JuanRa\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Veterinaria10\\Form1.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T06:14:50.549Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\JuanRa\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs",
-              "RelativeDocumentMoniker": "Veterinaria10\\Form1.cs",
-              "ToolTip": "C:\\Users\\JuanRa\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\Veterinaria10\\Form1.cs*",
-              "RelativeToolTip": "Veterinaria10\\Form1.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T06:13:44.13Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
