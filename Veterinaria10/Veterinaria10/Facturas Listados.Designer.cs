@@ -28,40 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            bttImprimirLF = new Button();
-            bttSalirLF = new Button();
-            bttNuevaLF = new Button();
+            cmdSalirLF = new Button();
+            cmdNuevaLF = new Button();
             lblListasFacturas = new Label();
-            dgvListasFacturas = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvListasFacturas).BeginInit();
+            grdListasFacturas = new DataGridView();
+            cmdModificarLF = new Button();
+            ((System.ComponentModel.ISupportInitialize)grdListasFacturas).BeginInit();
             SuspendLayout();
             // 
-            // bttImprimirLF
+            // cmdSalirLF
             // 
-            bttImprimirLF.Location = new Point(310, 400);
-            bttImprimirLF.Name = "bttImprimirLF";
-            bttImprimirLF.Size = new Size(75, 23);
-            bttImprimirLF.TabIndex = 40;
-            bttImprimirLF.Text = "Imprimir";
-            bttImprimirLF.UseVisualStyleBackColor = true;
+            cmdSalirLF.Location = new Point(391, 400);
+            cmdSalirLF.Name = "cmdSalirLF";
+            cmdSalirLF.Size = new Size(75, 23);
+            cmdSalirLF.TabIndex = 39;
+            cmdSalirLF.Text = "Salir";
+            cmdSalirLF.UseVisualStyleBackColor = true;
+            cmdSalirLF.Click += cmdSalirLF_Click;
             // 
-            // bttSalirLF
+            // cmdNuevaLF
             // 
-            bttSalirLF.Location = new Point(391, 400);
-            bttSalirLF.Name = "bttSalirLF";
-            bttSalirLF.Size = new Size(75, 23);
-            bttSalirLF.TabIndex = 39;
-            bttSalirLF.Text = "Salir";
-            bttSalirLF.UseVisualStyleBackColor = true;
-            // 
-            // bttNuevaLF
-            // 
-            bttNuevaLF.Location = new Point(229, 400);
-            bttNuevaLF.Name = "bttNuevaLF";
-            bttNuevaLF.Size = new Size(75, 23);
-            bttNuevaLF.TabIndex = 38;
-            bttNuevaLF.Text = "Nueva";
-            bttNuevaLF.UseVisualStyleBackColor = true;
+            cmdNuevaLF.Location = new Point(229, 400);
+            cmdNuevaLF.Name = "cmdNuevaLF";
+            cmdNuevaLF.Size = new Size(75, 23);
+            cmdNuevaLF.TabIndex = 38;
+            cmdNuevaLF.Text = "Nueva";
+            cmdNuevaLF.UseVisualStyleBackColor = true;
+            cmdNuevaLF.Click += cmdNuevaLF_Click;
             // 
             // lblListasFacturas
             // 
@@ -72,37 +65,47 @@
             lblListasFacturas.TabIndex = 37;
             lblListasFacturas.Text = "Lista de facturas:";
             // 
-            // dgvListasFacturas
+            // grdListasFacturas
             // 
-            dgvListasFacturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvListasFacturas.Location = new Point(12, 42);
-            dgvListasFacturas.Name = "dgvListasFacturas";
-            dgvListasFacturas.Size = new Size(486, 338);
-            dgvListasFacturas.TabIndex = 36;
+            grdListasFacturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grdListasFacturas.Location = new Point(12, 42);
+            grdListasFacturas.Name = "grdListasFacturas";
+            grdListasFacturas.Size = new Size(692, 338);
+            grdListasFacturas.TabIndex = 36;
+            // 
+            // cmdModificarLF
+            // 
+            cmdModificarLF.Location = new Point(310, 400);
+            cmdModificarLF.Name = "cmdModificarLF";
+            cmdModificarLF.Size = new Size(75, 23);
+            cmdModificarLF.TabIndex = 40;
+            cmdModificarLF.Text = "Modificar";
+            cmdModificarLF.UseVisualStyleBackColor = true;
+            cmdModificarLF.Click += cmdModificarLF_Click;
             // 
             // Facturas_Listados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(521, 450);
-            Controls.Add(bttImprimirLF);
-            Controls.Add(bttSalirLF);
-            Controls.Add(bttNuevaLF);
+            ClientSize = new Size(727, 450);
+            Controls.Add(cmdModificarLF);
+            Controls.Add(cmdSalirLF);
+            Controls.Add(cmdNuevaLF);
             Controls.Add(lblListasFacturas);
-            Controls.Add(dgvListasFacturas);
+            Controls.Add(grdListasFacturas);
             Name = "Facturas_Listados";
             Text = "Listados de Facturas";
-            ((System.ComponentModel.ISupportInitialize)dgvListasFacturas).EndInit();
+            Load += Facturas_Listados_Load;
+            ((System.ComponentModel.ISupportInitialize)grdListasFacturas).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button bttImprimirLF;
-        private Button bttSalirLF;
-        private Button bttNuevaLF;
+        private Button cmdSalirLF;
+        private Button cmdNuevaLF;
         private Label lblListasFacturas;
-        private DataGridView dgvListasFacturas;
+        private DataGridView grdListasFacturas;
+        private Button cmdModificarLF;
     }
 }
