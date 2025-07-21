@@ -12,9 +12,16 @@ namespace Veterinaria2
 {
     public partial class Facturas : Form
     {
+        clsFacturasConexion clsConexion = new clsFacturasConexion();
+        
         public Facturas()
         {
             InitializeComponent();
+        }
+
+        private void Facturas_Load(object sender, EventArgs e)
+        {
+            clsConexion.CargarClientes(cbxClienteCF);
         }
     }
 }

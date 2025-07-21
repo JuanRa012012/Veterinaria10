@@ -157,7 +157,7 @@
             // 
             // bttSalirCF
             // 
-            bttSalirCF.Location = new Point(246, 525);
+            bttSalirCF.Location = new Point(402, 525);
             bttSalirCF.Name = "bttSalirCF";
             bttSalirCF.Size = new Size(75, 23);
             bttSalirCF.TabIndex = 65;
@@ -166,7 +166,7 @@
             // 
             // bttGuardarCF
             // 
-            bttGuardarCF.Location = new Point(158, 525);
+            bttGuardarCF.Location = new Point(314, 525);
             bttGuardarCF.Name = "bttGuardarCF";
             bttGuardarCF.Size = new Size(75, 23);
             bttGuardarCF.TabIndex = 64;
@@ -196,9 +196,9 @@
             MascotaDF.AutoSize = true;
             MascotaDF.Location = new Point(12, 23);
             MascotaDF.Name = "MascotaDF";
-            MascotaDF.Size = new Size(55, 15);
+            MascotaDF.Size = new Size(51, 15);
             MascotaDF.TabIndex = 52;
-            MascotaDF.Text = "Mascota:";
+            MascotaDF.Text = "Servicio:";
             // 
             // cbxMascotaDF
             // 
@@ -289,6 +289,7 @@
             Controls.Add(lblClienteCF);
             Name = "Facturas";
             Text = "Creacion de Facturas";
+            Load += Facturas_Load;
             gbxDetallesFactura.ResumeLayout(false);
             gbxDetallesFactura.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvServicios).EndInit();
