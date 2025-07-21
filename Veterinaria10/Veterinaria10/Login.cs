@@ -51,5 +51,15 @@ namespace Veterinaria2
                 MessageBox.Show("Usuario o contraseña incorrectos, o cuenta inactiva.");
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmd_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
