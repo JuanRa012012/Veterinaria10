@@ -81,6 +81,7 @@ namespace Veterinaria2
             {
                 especieIDSeleccionada = Convert.ToInt32(grdListaEspecies.Rows[e.RowIndex].Cells["ID"].Value);
                 txtNombreEspecies.Text = grdListaEspecies.Rows[e.RowIndex].Cells["NOMBRE"].Value.ToString();
+                vrIdItemSeleccionado = especieIDSeleccionada;
             }
         }
 

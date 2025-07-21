@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Veterinaria10;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Veterinaria2
 {
@@ -92,16 +94,15 @@ namespace Veterinaria2
             try
             {
                 clsConexion.Abrir();
-                cmd = new SqlCommand("DELETE ESPECIE SET ESTADO = 2 WHERE ID = @id", clsConexion.sc);
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd = new SqlCommand("UPDATE ESPECIE SET ESTADO = 2 WHERE ID = " + id + ";", clsConexion.sc);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("La especie ha sido anulada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El ítem ha sido anulado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarDatos(dgv);
-                clsConexion.Cerrar();
+                clsConexion.Abrir();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al anular especie: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("" + ex, "State", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

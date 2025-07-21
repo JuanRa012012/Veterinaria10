@@ -35,6 +35,7 @@ C:\Users\JuanRa\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\D
 C:\Users\JuanRa\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.pdb
 C:\Users\JuanRa\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.genruntimeconfig.cache
 C:\Users\JuanRa\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\ref\Veterinaria10.dll
+<<<<<<< HEAD
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.csproj.AssemblyReference.cache
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Admin.resources
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Clientes.resources
@@ -58,3 +59,42 @@ C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III 
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.dll
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\refint\Veterinaria10.dll
 C:\Users\ca_mo\Documentos\UNICAH\II Periodo 2025\Entornos Desarrollo Visual\III Parcial\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.pdb
+=======
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.csproj.AssemblyReference.cache
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Admin.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Clientes.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Empleado.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Especies.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Facturas_Listados.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Facturas.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.Form1.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.FormUsuarios.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Login.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Mascotas.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Razas.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Servicios.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria2.Veterinarios.resources
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.csproj.GenerateResource.cache
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.AssemblyInfoInputs.cache
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.AssemblyInfo.cs
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.sourcelink.json
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\refint\Veterinaria10.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.pdb
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\Veterinaria10.exe
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\Veterinaria10.deps.json
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\Veterinaria10.runtimeconfig.json
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\Veterinaria10.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\Veterinaria10.pdb
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterina.8693FA68.Up2Date
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\Veterinaria10.genruntimeconfig.cache
+C:\Users\Lenovo M720s\Documents\GitHub\Veterinaria10\Veterinaria10\Veterinaria10\obj\Debug\net8.0-windows\ref\Veterinaria10.dll
+>>>>>>> d768183841a4f2108262d12e6cf0dbcada82b91f

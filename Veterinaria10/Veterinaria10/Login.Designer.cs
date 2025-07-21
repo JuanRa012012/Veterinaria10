@@ -47,6 +47,7 @@
             cmd_cancelar.TabIndex = 13;
             cmd_cancelar.Text = "Cancelar";
             cmd_cancelar.UseVisualStyleBackColor = true;
+            cmd_cancelar.Click += cmd_cancelar_Click;
             // 
             // btnIngresar
             // 
@@ -81,6 +82,7 @@
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(221, 23);
             txtUser.TabIndex = 9;
+            txtUser.TextChanged += txtUser_TextChanged;
             // 
             // label2
             // 
@@ -114,6 +116,7 @@
             Controls.Add(label1);
             Name = "Login";
             Text = "Login";
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

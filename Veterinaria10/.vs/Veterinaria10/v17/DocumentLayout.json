@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\ca_mo\\Documentos\\UNICAH\\II Periodo 2025\\Entornos Desarrollo Visual\\III Parcial\\Veterinaria10\\Veterinaria10\\",
   "Documents": [
     {
@@ -11,6 +12,10 @@
       "RelativeMoniker": "D:0:0:{D3FFDC69-A124-45D3-8C5A-2DF5048FF5F3}|Veterinaria10\\Veterinaria10.csproj|solutionrelative:veterinaria10\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
+=======
+  "WorkspaceRootPath": "C:\\Users\\Lenovo M720s\\Documents\\GitHub\\Veterinaria10\\Veterinaria10\\",
+  "Documents": [],
+>>>>>>> d768183841a4f2108262d12e6cf0dbcada82b91f
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -20,6 +25,10 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"

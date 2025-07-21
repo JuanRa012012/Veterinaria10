@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Veterinaria10;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Veterinaria2
 {
@@ -19,7 +21,9 @@ namespace Veterinaria2
         {
             try
             {
-                string query = @"SELECT M.ID, M.NOMBREMASCOTA, M.FECHANACIMIENTO,
+
+
+                string query = @"SELECT M.ID, M.NOMBRE, M.FECHANACIMIENTO,
                                  C.ID AS CLIENTEID, C.NOMBRE AS NOMBRECLIENTE,
                                  E.ID AS ESPECIEID, E.NOMBRE AS NOMBREESPECIE,
                                  R.ID AS RAZAID, R.NOMBRERAZA AS NOMBRERAZA
@@ -90,24 +94,24 @@ namespace Veterinaria2
             }
         }
 
-        public void InsertMascota(DataGridView dgv, string nombre, DateTime fecha, int clienteID, int especieID, int razaID)
+        public void InsertMascota(DataGridView dgv, string nombre, string fecha, int clienteID, int especieID, int razaID)
         {
             try
             {
                 conexion.Abrir();
-                string query = @"INSERT INTO MASCOTA (NOMBREMASCOTA, FECHANACIMIENTO, CLIENTEID, ESPECIEID, RAZAID, ESTADO)
-                                 VALUES (@nombre, @fecha, @clienteID, @especieID, @razaID, 1)";
-                cmd = new SqlCommand(query, conexion.sc);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@fecha", fecha);
-                cmd.Parameters.AddWithValue("@clienteID", clienteID);
-                cmd.Parameters.AddWithValue("@especieID", especieID);
-                cmd.Parameters.AddWithValue("@razaID", razaID);
-                cmd.ExecuteNonQuery();
+                cmd = new SqlCommand("INSERT INTO MASCOTA " +
+                                    " (" +
+                                    " NOMBRE, FECHANACIMIENTO, CLIENTEID, ESPECIEID, RAZAID, ESTADO, USUARIOID " +
+                                    " )" +
+                                    " VALUES " +
+                                    " ( " +
+                                    " '" + nombre + "','" + fecha + "','" + clienteID + "','" + especieID + "','" + razaID + "', 1, 1" +
+                                    " );", conexion.sc);
 
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Mascota guardada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarDatos(dgv);
-                conexion.Cerrar();
+                conexion.Abrir();
             }
             catch (Exception ex)
             {
@@ -115,26 +119,25 @@ namespace Veterinaria2
             }
         }
 
-        public void UpdateMascota(DataGridView dgv, string nombre, DateTime fecha, int clienteID, int especieID, int razaID, int id)
+        public void UpdateMascota(DataGridView dgv, string nombre, string fecha, int clienteID, int especieID, int razaID, int id)
         {
             try
             {
                 conexion.Abrir();
-                string query = @"UPDATE MASCOTA SET NOMBREMASCOTA = @nombre, FECHANACIMIENTO = @fecha,
-                                 CLIENTEID = @clienteID, ESPECIEID = @especieID, RAZAID = @razaID
-                                 WHERE ID = @id";
-                cmd = new SqlCommand(query, conexion.sc);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@fecha", fecha);
-                cmd.Parameters.AddWithValue("@clienteID", clienteID);
-                cmd.Parameters.AddWithValue("@especieID", especieID);
-                cmd.Parameters.AddWithValue("@razaID", razaID);
-                cmd.Parameters.AddWithValue("@id", id);
+         
+                cmd = new SqlCommand("UPDATE MASCOTA " +
+                    "SET " +
+                    "NOMBRE = '" + nombre + "', " +
+                    "FECHANACIMIENTO = '" + fecha + "', " +
+                    "CLIENTEID = '" + clienteID + "', " +
+                    "ESPECIEID = '" + especieID + "', " +
+                    "RAZAID = '" + razaID + "' " +
+                    "WHERE ID = " + id + ";", conexion.sc);
+    
                 cmd.ExecuteNonQuery();
-
                 MessageBox.Show("Mascota modificada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarDatos(dgv);
-                conexion.Cerrar();
+                conexion.Abrir();
             }
             catch (Exception ex)
             {
@@ -147,17 +150,15 @@ namespace Veterinaria2
             try
             {
                 conexion.Abrir();
-                cmd = new SqlCommand("UPDATE MASCOTA SET ESTADO = 2 WHERE ID = @id", conexion.sc);
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd = new SqlCommand("UPDATE MASCOTA SET ESTADO = 2 WHERE ID = " + id + ";", conexion.sc);
                 cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Mascota anulada correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El ítem ha sido anulado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarDatos(dgv);
-                conexion.Cerrar();
+                conexion.Abrir();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al anular mascota: " + ex.Message);
+                MessageBox.Show("" + ex, "State", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
