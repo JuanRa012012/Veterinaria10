@@ -28,59 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            cmd_cancelar = new Button();
+            btnIngresar = new Button();
+            pictureBox1 = new PictureBox();
+            txtClave = new TextBox();
+            txtUser = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // cmd_cancelar
             // 
-            button1.Location = new Point(56, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Abrir Con.";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            cmd_cancelar.Location = new Point(158, 372);
+            cmd_cancelar.Name = "cmd_cancelar";
+            cmd_cancelar.Size = new Size(75, 23);
+            cmd_cancelar.TabIndex = 20;
+            cmd_cancelar.Text = "Cancelar";
+            cmd_cancelar.UseVisualStyleBackColor = true;
+            cmd_cancelar.Click += cmd_cancelar_Click;
             // 
-            // button2
+            // btnIngresar
             // 
-            button2.Location = new Point(154, 39);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Cerrar Con.";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnIngresar.Location = new Point(12, 372);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(75, 23);
+            btnIngresar.TabIndex = 19;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += btnIngresar_Click;
             // 
-            // button3
+            // pictureBox1
             // 
-            button3.Location = new Point(56, 68);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Abrir Form.";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(221, 179);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
+            // txtClave
+            // 
+            txtClave.Location = new Point(12, 313);
+            txtClave.Name = "txtClave";
+            txtClave.Size = new Size(221, 23);
+            txtClave.TabIndex = 17;
+            // 
+            // txtUser
+            // 
+            txtUser.Location = new Point(12, 244);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(221, 23);
+            txtUser.TabIndex = 16;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 295);
+            label2.Name = "label2";
+            label2.Size = new Size(39, 15);
+            label2.TabIndex = 15;
+            label2.Text = "Clave:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 226);
+            label1.Name = "label1";
+            label1.Size = new Size(50, 15);
+            label1.TabIndex = 14;
+            label1.Text = "Usuario:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            ClientSize = new Size(245, 403);
+            ControlBox = false;
+            Controls.Add(cmd_cancelar);
+            Controls.Add(btnIngresar);
+            Controls.Add(pictureBox1);
+            Controls.Add(txtClave);
+            Controls.Add(txtUser);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
-            //Load += Form1_Load;
+            Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button cmd_cancelar;
+        private Button btnIngresar;
+        private PictureBox pictureBox1;
+        private TextBox txtClave;
+        private TextBox txtUser;
+        private Label label2;
+        private Label label1;
     }
 }

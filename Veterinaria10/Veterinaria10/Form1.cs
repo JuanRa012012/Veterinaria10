@@ -23,45 +23,58 @@ namespace Veterinaria10
 
         private void button3_Click(object sender, EventArgs e)
         {
-          Login form = new Login();
+            Login form = new Login();
             form.Show();
-            string usuario = txtUser.Text.Trim();
-            string contraseña = txtClave.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
-            {
-                MessageBox.Show("Por favor, complete todos los campos.");
-                return;
-            }
-
-            clsLoginV login = new clsLoginV();
-            string rol;
-
-            if (login.ValidarCredenciales(usuario, contraseña, out rol))
-            {
-                MessageBox.Show($"Bienvenido, {usuario}. Rol: {rol}");
-
-                if (rol == "Administrador")
-                {
-                    new Admin().Show();
-                }
-                else
-                {
-                    new Empleado().Show();
-                }
-
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos, o cuenta inactiva.");
-            }
         }
-        
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string usuario = txtUser.Text.Trim();
+                string contraseña = txtClave.Text.Trim();
+
+                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos.");
+                    return;
+                }
+
+                clsLoginV login = new clsLoginV();
+                int vrIdRol;
+
+                if (login.ValidarCredenciales(usuario, contraseña, out vrIdRol))
+                {
+                    if (vrIdRol == 1)
+                    {
+                        new Admin().Show();
+                    }
+                    else
+                    {
+                        new Empleado().Show();
+                    }
+
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmd_cancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
         }
     }
 }

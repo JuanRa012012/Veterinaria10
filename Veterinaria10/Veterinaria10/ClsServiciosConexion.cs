@@ -46,14 +46,12 @@ namespace Veterinaria2
             }
         }
 
-        public void InsertServicio(DataGridView dgv, String vrNombre, decimal vrPrecio)
+        public void Insert(DataGridView dgv, String vrNombre, decimal vrPrecio)
         {
             try
             {
                 clsConexion.Abrir();
-                cmd = new SqlCommand("INSERT INTO SERVICIO VALUES (@nombre, @precio, 1)", clsConexion.sc);
-                cmd.Parameters.AddWithValue("@nombre", vrNombre);
-                cmd.Parameters.AddWithValue("@precio", vrPrecio);
+                cmd = new SqlCommand("INSERT INTO SERVICIO VALUES ('" + vrNombre + "'," + vrPrecio + ", 1, 1)", clsConexion.sc);
                 cmd.ExecuteNonQuery();
                 CargarDatos(dgv);
                 clsConexion.Abrir();
@@ -64,14 +62,12 @@ namespace Veterinaria2
             }
         }
 
-        public void UpdateServicio(DataGridView dgv, string vrNombre, decimal vrPrecio, int vrID)
+        public void Update(DataGridView dgv, string vrNombre, decimal vrPrecio, int vrID)
         {
             try
             {
                 clsConexion.Abrir();
-                cmd = new SqlCommand("UPDATE SERVICIO SET NOMBRESERVICIO = @nombre, PRECIO = @precio WHERE ID = @id", clsConexion.sc);
-                cmd.Parameters.AddWithValue("@nombre", vrNombre);
-                cmd.Parameters.AddWithValue("@precio", vrPrecio);
+                cmd = new SqlCommand("UPDATE SERVICIO SET NOMBRE = '" + vrNombre + "', PRECIO = " + vrPrecio + " WHERE ID = " + vrID + ";", clsConexion.sc);
                 cmd.Parameters.AddWithValue("@id", vrID);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("El ítem ha sido modificado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,7 +80,7 @@ namespace Veterinaria2
             }
         }
 
-        public void DeleteServicio(DataGridView dgv, int vrID)
+        public void Delete(DataGridView dgv, int vrID)
         {
             try
             {

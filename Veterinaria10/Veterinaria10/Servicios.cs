@@ -12,67 +12,86 @@ namespace Veterinaria2
 {
     public partial class Servicios : Form
     {
-        ClsServiciosConexion obj = new ClsServiciosConexion();
-        int idActual = 0;
+        clsValidaciones clsValidaciones = new clsValidaciones();
+        ClsServiciosConexion clsConexion = new ClsServiciosConexion();
+        int RowIndex = 0;
+        int vrIdItemSeleccionado = 0;
+
+        private void mtdLimpiar()
+        {
+            txtNombre.Text = string.Empty;
+            txtPrecio.Text = "0.00";
+            txtNombre.Focus();
+            RowIndex = 0;
+            vrIdItemSeleccionado = 0;
+            cmdCancelar.Visible = false;
+        }
 
         public Servicios()
         {
             InitializeComponent();
-            obj.CargarDatos(grdServicios);
+            clsConexion.CargarDatos(grdServicios);
+        }
+
+        private void mtdInsertUpdate(int vrAccion)
+        {
+            if (txtNombre.Text.Length == 0)
+            {
+                MessageBox.Show("Por favor ingrese un nombre para el servicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Focus();
+            }
+            else if (Convert.ToDecimal(txtPrecio.Text) == 0)
+            {
+                MessageBox.Show("Por favor escriba el precio para el servicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPrecio.Focus();
+            }
+            else if (vrIdItemSeleccionado == 0 && vrAccion == 2)
+            {
+                MessageBox.Show("Para realizar una modificación, primero debe seleccionar un ítem de la lista", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNombre.Focus();
+            }
+            else
+            {
+                DialogResult vrRespuesta = MessageBox.Show("Está seguro que los datos son correctos?", "Veterinaria", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (vrRespuesta == DialogResult.Yes)
+                {
+                    String vrNombre = txtNombre.Text;
+                    decimal vrPrecio = Convert.ToDecimal(txtPrecio.Text);
+
+                    if (vrAccion == 1)
+                        clsConexion.Insert(grdServicios, vrNombre, vrPrecio);
+                    else
+                        clsConexion.Update(grdServicios, vrNombre, vrPrecio, vrIdItemSeleccionado);
+
+                    mtdLimpiar();
+                }
+            }
         }
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "" && txtPrecio.Text != "")
-            {
-                decimal precio;
-                if (decimal.TryParse(txtPrecio.Text, out precio))
-                {
-                    obj.InsertServicio(grdServicios, txtNombre.Text, precio);
-                    Limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese un precio válido.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Complete todos los campos.");
-            }
+            mtdInsertUpdate(1);
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "" && txtPrecio.Text != "" && idActual != 0)
-            {
-                decimal precio;
-                if (decimal.TryParse(txtPrecio.Text, out precio))
-                {
-                    obj.UpdateServicio(grdServicios, txtNombre.Text, precio, idActual);
-                    Limpiar();
-                }
-                else
-                {
-                    MessageBox.Show("Ingrese un precio válido.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un servicio de la lista para modificar.");
-            }
+            mtdInsertUpdate(2);
         }
 
         private void cmdAnular_Click(object sender, EventArgs e)
         {
-            if (idActual != 0)
+            DialogResult vrRespuesta = MessageBox.Show("Está seguro que desea anular este ítem?", "Veterinaria", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (vrRespuesta == DialogResult.Yes)
             {
-                obj.DeleteServicio(grdServicios, idActual);
-                Limpiar();
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un servicio de la lista para anular.");
+                if (vrIdItemSeleccionado == 0)
+                    MessageBox.Show("Por favor seleccione un ítem de la lista", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    clsConexion.Delete(grdServicios, vrIdItemSeleccionado);
+                    mtdLimpiar();
+                }
             }
         }
 
@@ -83,19 +102,45 @@ namespace Veterinaria2
 
         private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            //if (e.RowIndex >= 0)
+            //{
+            //    idActual = Convert.ToInt32(grdServicios.Rows[e.RowIndex].Cells["ID"].Value);
+            //    txtNombre.Text = grdServicios.Rows[e.RowIndex].Cells["NOMBRESERVICIO"].Value.ToString();
+            //    txtPrecio.Text = grdServicios.Rows[e.RowIndex].Cells["PRECIO"].Value.ToString();
+            //}
+
+            try
             {
-                idActual = Convert.ToInt32(grdServicios.Rows[e.RowIndex].Cells["ID"].Value);
-                txtNombre.Text = grdServicios.Rows[e.RowIndex].Cells["NOMBRESERVICIO"].Value.ToString();
-                txtPrecio.Text = grdServicios.Rows[e.RowIndex].Cells["PRECIO"].Value.ToString();
+                RowIndex = e.RowIndex;
+
+                vrIdItemSeleccionado = Convert.ToInt32(grdServicios.CurrentRow.Cells[0].Value.ToString());
+                txtNombre.Text = grdServicios.CurrentRow.Cells[1].Value.ToString();
+                txtPrecio.Text = grdServicios.CurrentRow.Cells[2].Value.ToString();
+                cmdCancelar.Visible = true;
+            }
+            catch (Exception ex)
+            {
             }
         }
 
-        private void Limpiar()
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            txtNombre.Clear();
-            txtPrecio.Clear();
-            idActual = 0;
+
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            mtdLimpiar();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloReales(e);
         }
     }
 }
