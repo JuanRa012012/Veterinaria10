@@ -38,6 +38,7 @@
             cmdModificar = new Button();
             cmdSalir = new Button();
             cmdGuardar = new Button();
+            cmdCancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)grdServicios).BeginInit();
             SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(297, 23);
             txtPrecio.TabIndex = 69;
+            txtPrecio.KeyPress += txtPrecio_KeyPress;
             // 
             // label1
             // 
@@ -73,6 +75,7 @@
             grdServicios.Name = "grdServicios";
             grdServicios.Size = new Size(297, 273);
             grdServicios.TabIndex = 66;
+            grdServicios.CellClick += dgvServicios_CellClick;
             // 
             // txtNombre
             // 
@@ -80,6 +83,8 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(297, 23);
             txtNombre.TabIndex = 65;
+            txtNombre.TextChanged += txtNombre_TextChanged;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // label2
             // 
@@ -98,6 +103,7 @@
             cmdAnular.TabIndex = 73;
             cmdAnular.Text = "Anular";
             cmdAnular.UseVisualStyleBackColor = true;
+            cmdAnular.Click += cmdAnular_Click;
             // 
             // cmdModificar
             // 
@@ -107,6 +113,7 @@
             cmdModificar.TabIndex = 72;
             cmdModificar.Text = "Modificar";
             cmdModificar.UseVisualStyleBackColor = true;
+            cmdModificar.Click += cmdModificar_Click;
             // 
             // cmdSalir
             // 
@@ -126,6 +133,18 @@
             cmdGuardar.TabIndex = 70;
             cmdGuardar.Text = "Guardar";
             cmdGuardar.UseVisualStyleBackColor = true;
+            cmdGuardar.Click += cmdGuardar_Click;
+            // 
+            // cmdCancelar
+            // 
+            cmdCancelar.Location = new Point(233, 152);
+            cmdCancelar.Name = "cmdCancelar";
+            cmdCancelar.Size = new Size(75, 23);
+            cmdCancelar.TabIndex = 74;
+            cmdCancelar.Text = "Cancelar";
+            cmdCancelar.UseVisualStyleBackColor = true;
+            cmdCancelar.Visible = false;
+            cmdCancelar.Click += cmdCancelar_Click;
             // 
             // Servicios
             // 
@@ -133,6 +152,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(322, 519);
             ControlBox = false;
+            Controls.Add(cmdCancelar);
             Controls.Add(cmdAnular);
             Controls.Add(cmdModificar);
             Controls.Add(cmdSalir);
@@ -162,5 +182,6 @@
         private Button cmdModificar;
         private Button cmdSalir;
         private Button cmdGuardar;
+        private Button cmdCancelar;
     }
 }

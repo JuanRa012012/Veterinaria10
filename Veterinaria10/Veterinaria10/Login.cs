@@ -19,36 +19,41 @@ namespace Veterinaria2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario = txtUser.Text.Trim();
-            string contraseña = txtClave.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
+            try
             {
-                MessageBox.Show("Por favor, complete todos los campos.");
-                return;
-            }
+                string usuario = txtUser.Text.Trim();
+                string contraseña = txtClave.Text.Trim();
 
-            clsLoginV login = new clsLoginV();
-            string rol;
-
-            if (login.ValidarCredenciales(usuario, contraseña, out rol))
-            {
-                MessageBox.Show($"Bienvenido, {usuario}. Rol: {rol}");
-
-                if (rol == "Administrador")
+                if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
                 {
-                    new Admin().Show();
+                    MessageBox.Show("Por favor, complete todos los campos.");
+                    return;
+                }
+
+                clsLoginV login = new clsLoginV();
+                int vrIdRol;
+
+                if (login.ValidarCredenciales(usuario, contraseña, out vrIdRol))
+                {
+                    if (vrIdRol == 1)
+                    {
+                        new Admin().Show();
+                    }
+                    else
+                    {
+                        new Empleado().Show();
+                    }
+
+                    this.Hide();
                 }
                 else
                 {
-                    new Empleado().Show();
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
-                this.Hide();
             }
-            else
+            catch (Exception ex) 
             {
-                MessageBox.Show("Usuario o contraseña incorrectos, o cuenta inactiva.");
+                MessageBox.Show(ex.Message);
             }
         }
     }
