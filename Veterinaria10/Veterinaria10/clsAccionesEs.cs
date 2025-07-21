@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using Veterinaria10;
 
 namespace Veterinaria2
 {
@@ -13,7 +14,6 @@ namespace Veterinaria2
     {
 
         clsConexion conexion = new clsConexion();
-       
         SqlDataAdapter da;
 
         DataTable dt;

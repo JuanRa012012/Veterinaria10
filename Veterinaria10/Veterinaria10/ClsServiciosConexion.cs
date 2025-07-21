@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Veterinaria10;
 
 namespace Veterinaria2
 {
@@ -19,7 +20,7 @@ namespace Veterinaria2
         {
             try
             {
-                da = new SqlDataAdapter("SELECT ID, NOMBRESERVICIO, PRECIO FROM SERVICIO WHERE ESTADO = 1", clsConexion.sc);
+                da = new SqlDataAdapter("SELECT ID, NOMBRE, PRECIO FROM SERVICIO WHERE ESTADO = 1", clsConexion.sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -34,7 +35,7 @@ namespace Veterinaria2
         {
             try
             {
-                da = new SqlDataAdapter("SELECT ID, NOMBRESERVICIO, PRECIO FROM SERVICIO WHERE NOMBRESERVICIO LIKE '%" + vrBuscar + "%' AND ESTADO = 1", clsConexion.sc);
+                da = new SqlDataAdapter("SELECT ID, NOMBRE, PRECIO FROM SERVICIO WHERE NOMBRESERVICIO LIKE '%" + vrBuscar + "%' AND ESTADO = 1", clsConexion.sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
