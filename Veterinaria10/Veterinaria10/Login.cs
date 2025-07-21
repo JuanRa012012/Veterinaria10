@@ -56,5 +56,15 @@ namespace Veterinaria2
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmd_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
