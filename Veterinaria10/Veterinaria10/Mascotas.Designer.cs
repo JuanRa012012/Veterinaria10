@@ -1,4 +1,5 @@
-﻿namespace Veterinaria2
+﻿
+namespace Veterinaria2
 {
     partial class Mascotas
     {
@@ -63,6 +64,7 @@
             grdMascotas.Name = "grdMascotas";
             grdMascotas.Size = new Size(469, 203);
             grdMascotas.TabIndex = 38;
+            grdMascotas.CellContentClick += grdMascotas_CellContentClick;
             // 
             // cboEspecies
             // 
@@ -155,6 +157,7 @@
             cmdAnular.TabIndex = 43;
             cmdAnular.Text = "Anular";
             cmdAnular.UseVisualStyleBackColor = true;
+            cmdAnular.Click += cmdAnular_Click;
             // 
             // cmdModificar
             // 
@@ -164,6 +167,7 @@
             cmdModificar.TabIndex = 42;
             cmdModificar.Text = "Modificar";
             cmdModificar.UseVisualStyleBackColor = true;
+            cmdModificar.Click += cmdModificar_Click;
             // 
             // cmdSalir
             // 
@@ -173,7 +177,7 @@
             cmdSalir.TabIndex = 41;
             cmdSalir.Text = "Salir";
             cmdSalir.UseVisualStyleBackColor = true;
-            cmdSalir.Click += cmdSalir_Click;
+            cmdSalir.Click += cmdSalir_Click_1;
             // 
             // cmdGuardar
             // 
@@ -183,6 +187,7 @@
             cmdGuardar.TabIndex = 40;
             cmdGuardar.Text = "Guardar";
             cmdGuardar.UseVisualStyleBackColor = true;
+            cmdGuardar.Click += cmdGuardar_Click;
             // 
             // Mascotas
             // 
@@ -208,10 +213,20 @@
             Controls.Add(label1);
             Name = "Mascotas";
             Text = "Mascotas";
-            Load += Mascotas_Load;
+            Load += Mascotas_Load_1;
             ((System.ComponentModel.ISupportInitialize)grdMascotas).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Mascotas_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

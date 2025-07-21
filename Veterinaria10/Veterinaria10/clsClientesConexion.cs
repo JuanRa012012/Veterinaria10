@@ -52,6 +52,7 @@ namespace Veterinaria2
             try
             {
                 clsConexion.Abrir();
+
                 cmd = new SqlCommand("INSERT INTO CLIENTE " +
                                     " (" +
                                     " NOMBRE, FECHANACIMIENTO, TELEFONO, CORREO, DIRECCION, ESTADO, USUARIOID " +
