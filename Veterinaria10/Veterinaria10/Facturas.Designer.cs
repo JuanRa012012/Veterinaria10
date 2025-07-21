@@ -36,7 +36,7 @@
             dtpFechaEstimadaCF = new DateTimePicker();
             lblFechaInicioCF = new Label();
             dtpFechaInicioCF = new DateTimePicker();
-            cbxMascotasCF = new ComboBox();
+            cboMascotas = new ComboBox();
             lblMascotasCF = new Label();
             cbxClienteCF = new ComboBox();
             lblClienteCF = new Label();
@@ -44,7 +44,7 @@
             bttGuardarCF = new Button();
             gbxDetallesFactura = new GroupBox();
             MascotaDF = new Label();
-            cbxMascotaDF = new ComboBox();
+            cboServicios = new ComboBox();
             bttAgregarDF = new Button();
             lblDescuentoDF = new Label();
             txtDescuentoDF = new TextBox();
@@ -52,12 +52,14 @@
             txtPrecioDF = new TextBox();
             dgvServicios = new DataGridView();
             lblServicios = new Label();
+            button1 = new Button();
             gbxDetallesFactura.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvServicios).BeginInit();
             SuspendLayout();
             // 
             // cbxVeterinarioCF
             // 
+            cbxVeterinarioCF.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxVeterinarioCF.FormattingEnabled = true;
             cbxVeterinarioCF.Location = new Point(255, 153);
             cbxVeterinarioCF.Name = "cbxVeterinarioCF";
@@ -121,13 +123,14 @@
             dtpFechaInicioCF.Size = new Size(221, 23);
             dtpFechaInicioCF.TabIndex = 55;
             // 
-            // cbxMascotasCF
+            // cboMascotas
             // 
-            cbxMascotasCF.FormattingEnabled = true;
-            cbxMascotasCF.Location = new Point(256, 45);
-            cbxMascotasCF.Name = "cbxMascotasCF";
-            cbxMascotasCF.Size = new Size(221, 23);
-            cbxMascotasCF.TabIndex = 54;
+            cboMascotas.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMascotas.FormattingEnabled = true;
+            cboMascotas.Location = new Point(256, 45);
+            cboMascotas.Name = "cboMascotas";
+            cboMascotas.Size = new Size(221, 23);
+            cboMascotas.TabIndex = 54;
             // 
             // lblMascotasCF
             // 
@@ -140,11 +143,14 @@
             // 
             // cbxClienteCF
             // 
+            cbxClienteCF.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxClienteCF.FormattingEnabled = true;
             cbxClienteCF.Location = new Point(12, 45);
             cbxClienteCF.Name = "cbxClienteCF";
             cbxClienteCF.Size = new Size(221, 23);
             cbxClienteCF.TabIndex = 52;
+            cbxClienteCF.SelectedIndexChanged += cbxClienteCF_SelectedIndexChanged;
+            cbxClienteCF.MouseClick += cbxClienteCF_MouseClick;
             // 
             // lblClienteCF
             // 
@@ -163,6 +169,7 @@
             bttSalirCF.TabIndex = 65;
             bttSalirCF.Text = "Salir";
             bttSalirCF.UseVisualStyleBackColor = true;
+            bttSalirCF.Click += bttSalirCF_Click;
             // 
             // bttGuardarCF
             // 
@@ -176,7 +183,7 @@
             // gbxDetallesFactura
             // 
             gbxDetallesFactura.Controls.Add(MascotaDF);
-            gbxDetallesFactura.Controls.Add(cbxMascotaDF);
+            gbxDetallesFactura.Controls.Add(cboServicios);
             gbxDetallesFactura.Controls.Add(bttAgregarDF);
             gbxDetallesFactura.Controls.Add(lblDescuentoDF);
             gbxDetallesFactura.Controls.Add(txtDescuentoDF);
@@ -200,13 +207,14 @@
             MascotaDF.TabIndex = 52;
             MascotaDF.Text = "Servicio:";
             // 
-            // cbxMascotaDF
+            // cboServicios
             // 
-            cbxMascotaDF.FormattingEnabled = true;
-            cbxMascotaDF.Location = new Point(12, 41);
-            cbxMascotaDF.Name = "cbxMascotaDF";
-            cbxMascotaDF.Size = new Size(145, 23);
-            cbxMascotaDF.TabIndex = 53;
+            cboServicios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboServicios.FormattingEnabled = true;
+            cboServicios.Location = new Point(12, 41);
+            cboServicios.Name = "cboServicios";
+            cboServicios.Size = new Size(145, 23);
+            cboServicios.TabIndex = 53;
             // 
             // bttAgregarDF
             // 
@@ -220,7 +228,7 @@
             // lblDescuentoDF
             // 
             lblDescuentoDF.AutoSize = true;
-            lblDescuentoDF.Location = new Point(266, 23);
+            lblDescuentoDF.Location = new Point(277, 23);
             lblDescuentoDF.Name = "lblDescuentoDF";
             lblDescuentoDF.Size = new Size(66, 15);
             lblDescuentoDF.TabIndex = 36;
@@ -228,7 +236,7 @@
             // 
             // txtDescuentoDF
             // 
-            txtDescuentoDF.Location = new Point(266, 41);
+            txtDescuentoDF.Location = new Point(277, 41);
             txtDescuentoDF.Name = "txtDescuentoDF";
             txtDescuentoDF.Size = new Size(100, 23);
             txtDescuentoDF.TabIndex = 37;
@@ -236,7 +244,7 @@
             // lblPrecioDF
             // 
             lblPrecioDF.AutoSize = true;
-            lblPrecioDF.Location = new Point(160, 23);
+            lblPrecioDF.Location = new Point(171, 23);
             lblPrecioDF.Name = "lblPrecioDF";
             lblPrecioDF.Size = new Size(43, 15);
             lblPrecioDF.TabIndex = 35;
@@ -244,7 +252,7 @@
             // 
             // txtPrecioDF
             // 
-            txtPrecioDF.Location = new Point(160, 41);
+            txtPrecioDF.Location = new Point(171, 41);
             txtPrecioDF.Name = "txtPrecioDF";
             txtPrecioDF.Size = new Size(100, 23);
             txtPrecioDF.TabIndex = 35;
@@ -266,12 +274,23 @@
             lblServicios.TabIndex = 31;
             lblServicios.Text = "Servicios brindados - doble clic para quitar de la lista:";
             // 
+            // button1
+            // 
+            button1.Location = new Point(139, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 54;
+            button1.Text = "Agregar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Facturas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(505, 562);
             ControlBox = false;
+            Controls.Add(button1);
             Controls.Add(bttSalirCF);
             Controls.Add(bttGuardarCF);
             Controls.Add(gbxDetallesFactura);
@@ -283,7 +302,7 @@
             Controls.Add(dtpFechaEstimadaCF);
             Controls.Add(lblFechaInicioCF);
             Controls.Add(dtpFechaInicioCF);
-            Controls.Add(cbxMascotasCF);
+            Controls.Add(cboMascotas);
             Controls.Add(lblMascotasCF);
             Controls.Add(cbxClienteCF);
             Controls.Add(lblClienteCF);
@@ -307,7 +326,7 @@
         private DateTimePicker dtpFechaEstimadaCF;
         private Label lblFechaInicioCF;
         private DateTimePicker dtpFechaInicioCF;
-        private ComboBox cbxMascotasCF;
+        private ComboBox cboMascotas;
         private Label lblMascotasCF;
         private ComboBox cbxClienteCF;
         private Label lblClienteCF;
@@ -315,7 +334,7 @@
         private Button bttGuardarCF;
         private GroupBox gbxDetallesFactura;
         private Label MascotaDF;
-        private ComboBox cbxMascotaDF;
+        private ComboBox cboServicios;
         private Button bttAgregarDF;
         private Label lblDescuentoDF;
         private TextBox txtDescuentoDF;
@@ -323,5 +342,6 @@
         private TextBox txtPrecioDF;
         private DataGridView dgvServicios;
         private Label lblServicios;
+        private Button button1;
     }
 }
