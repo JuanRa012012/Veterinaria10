@@ -23,7 +23,7 @@ namespace Veterinaria10
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Razas form = new Razas();
+           Admin form = new Admin();
             form.Show();
         }
     }
