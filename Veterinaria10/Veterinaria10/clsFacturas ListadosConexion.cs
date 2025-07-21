@@ -15,6 +15,7 @@ namespace Veterinaria2
         clsConexion clsConexion = new clsConexion();
         SqlDataAdapter da;
         DataTable dt;
+        SqlCommand cmd;
 
         public void CargarDatos(DataGridView dgv)
         {
@@ -31,40 +32,37 @@ namespace Veterinaria2
             }
         }
 
-        public DataTable ObtenerFacturas()
+        public void ObtenerFacturas(DataGridView dgv)
         {
-            DataTable tabla = new DataTable();
-
             try
             {
-                Abrir();
-                string consulta = @"
-                SELECT 
-                    DF.ID, 
-                    DF.FacturaID, 
-                    DF.ServicioID, 
-                    DF.PrecioUnitario, 
-                    DF.Descuento, 
-                    DF.Estado, 
-                    DF.UsuarioID
-                FROM DetalleFactura DF";
-
-                SqlCommand cmd = new SqlCommand(consulta, conexion);
-                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
-                adaptador.Fill(tabla);
+                da = new SqlDataAdapter("SELECT A.ID NUMERO_FACTURA, A.FECHAFACTURA, D.NOMBRE NOMBRE_CLIENTE, E.NOMBRE VETERINARIO, F.NOMBRE MASCOTA, SUM(PRECIOUNITARIO * CANTIDAD) SUB_TOTAL, SUM(DESCUENTO * CANTIDAD) DESCUENTO,  SUM((PRECIOUNITARIO-DESCUENTO) * CANTIDAD) TOTAl FROM FACTURA A, DETALLEFACTURA B, SERVICIO C, CLIENTE D, VETERINARIO E, MASCOTA F WHERE A.ID = B.FACTURAID AND B.SERVICIOID = C.ID AND A.CLIENTEID = D.ID AND A.VETERINARIOID = E.ID AND A.MASCOTAID = F.ID AND A.ESTADO = 1 GROUP BY A.ID, A.FECHAFACTURA, D.NOMBRE, E.NOMBRE, F.NOMBRE", clsConexion.sc);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al obtener los datos: " + ex.Message);
+                MessageBox.Show("" + ex, "State", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                Cerrar();
-            }
+        }
 
-            return tabla;
-        }   
-            
+        public void Delete(int vrID)
+        {
+            try
+            {
+                clsConexion.Abrir();
+                cmd = new SqlCommand("UPDATE FACTURA SET ESTADO = 2 WHERE ID = " + vrID + ";", clsConexion.sc);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("El ítem ha sido anulado correctamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                clsConexion.Abrir();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex, "State", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

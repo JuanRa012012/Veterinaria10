@@ -16,6 +16,7 @@ namespace Veterinaria2
     public partial class Facturas : Form
     {
         clsFacturasConexion clsConexion = new clsFacturasConexion();
+        clsValidaciones clsValidaciones = new clsValidaciones();
         DataTable dt = new DataTable();
 
         public Facturas()
@@ -139,6 +140,9 @@ namespace Veterinaria2
             clsConexion.CargarServicios(cboServicios);
             cboServicios.SelectedIndex = -1;
             mtd_grid();
+            dtpFechaEntregaCF.MinDate = DateTime.Today;
+            dtpFechaEstimadaCF.MinDate = DateTime.Today;
+            dtpFechaInicioCF.MinDate = DateTime.Today;
         }
 
         private void bttSalirCF_Click(object sender, EventArgs e)
@@ -250,6 +254,16 @@ namespace Veterinaria2
         private void txtDescuento_TextChanged(object sender, EventArgs e)
         {
             mtdTotal();
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloEnteros(e);
+        }
+
+        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloReales(e);
         }
     }
 }

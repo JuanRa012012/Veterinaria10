@@ -114,6 +114,7 @@
             Controls.Add(txtUser);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";
             Text = "Login";
             Load += Login_Load;

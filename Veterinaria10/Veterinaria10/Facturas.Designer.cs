@@ -244,6 +244,7 @@
             txtCantidad.TabIndex = 55;
             txtCantidad.Text = "0";
             txtCantidad.TextChanged += textBox1_TextChanged;
+            txtCantidad.KeyPress += txtCantidad_KeyPress;
             // 
             // MascotaDF
             // 
@@ -291,6 +292,7 @@
             txtDescuento.TabIndex = 37;
             txtDescuento.Text = "0.00";
             txtDescuento.TextChanged += txtDescuento_TextChanged;
+            txtDescuento.KeyPress += txtDescuento_KeyPress;
             // 
             // lblPrecioDF
             // 
@@ -350,7 +352,9 @@
             Controls.Add(lblMascotasCF);
             Controls.Add(cbxClienteCF);
             Controls.Add(lblClienteCF);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Facturas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Creacion de Facturas";
             Load += Facturas_Load;
             gbxDetallesFactura.ResumeLayout(false);

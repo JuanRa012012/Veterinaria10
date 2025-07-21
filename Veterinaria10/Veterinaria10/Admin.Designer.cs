@@ -123,7 +123,7 @@
             btnMascotas.Name = "btnMascotas";
             btnMascotas.Size = new Size(122, 48);
             btnMascotas.TabIndex = 1;
-            btnMascotas.Text = "GESTIONAR MASOTAS";
+            btnMascotas.Text = "GESTIONAR MASCOTAS";
             btnMascotas.UseVisualStyleBackColor = true;
             btnMascotas.Click += btnMascotas_Click;
             // 
@@ -144,6 +144,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(547, 617);
+            ControlBox = false;
             Controls.Add(button8);
             Controls.Add(btnMascotas);
             Controls.Add(btnClientes);
@@ -153,7 +154,9 @@
             Controls.Add(btnVeterinarios);
             Controls.Add(btnUser);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Admin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Administrador";
             ResumeLayout(false);
             PerformLayout();

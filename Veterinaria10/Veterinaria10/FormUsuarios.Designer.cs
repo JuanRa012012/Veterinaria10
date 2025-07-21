@@ -224,7 +224,9 @@
             Controls.Add(txtCodigo);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormUsuarios";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Usuarios";
             Load += FormUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)grdUsuarios).EndInit();

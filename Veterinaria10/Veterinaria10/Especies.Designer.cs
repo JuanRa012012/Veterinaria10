@@ -106,6 +106,8 @@
             txtNombreEspecies.Name = "txtNombreEspecies";
             txtNombreEspecies.Size = new Size(297, 23);
             txtNombreEspecies.TabIndex = 55;
+            txtNombreEspecies.TextChanged += txtNombreEspecies_TextChanged;
+            txtNombreEspecies.KeyPress += txtNombreEspecies_KeyPress;
             // 
             // lblNombreEspecies
             // 
@@ -120,7 +122,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(355, 450);
+            ClientSize = new Size(321, 419);
             ControlBox = false;
             Controls.Add(cmdAnularEspecies);
             Controls.Add(cmdModificarEspecies);
@@ -130,7 +132,9 @@
             Controls.Add(grdListaEspecies);
             Controls.Add(txtNombreEspecies);
             Controls.Add(lblNombreEspecies);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Especies";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Especies";
             Load += Especies_Load;
             ((System.ComponentModel.ISupportInitialize)grdListaEspecies).EndInit();
