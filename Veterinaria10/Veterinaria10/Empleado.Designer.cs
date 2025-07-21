@@ -94,12 +94,15 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(411, 567);
+            ControlBox = false;
             Controls.Add(btnSalir);
             Controls.Add(btnFacturas);
             Controls.Add(btnMascotas);
             Controls.Add(btnServicios);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Empleado";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Empleado";
             ResumeLayout(false);
             PerformLayout();

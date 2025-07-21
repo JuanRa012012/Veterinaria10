@@ -25,7 +25,7 @@ namespace Veterinaria2
             cboRazas.SelectedIndex = -1;
             RowIndex = 0;
             vrIdItemSeleccionado = 0;
-            
+
         }
         private void mtdInsertUpdate(int vrAccion)
         {
@@ -34,7 +34,7 @@ namespace Veterinaria2
                 MessageBox.Show("Por favor ingrese un nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
             }
-            
+
             else if (cboClientes.SelectedIndex == -1)
             {
                 MessageBox.Show("Por favor seleccione un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,12 +77,12 @@ namespace Veterinaria2
         }
         public Mascotas()
         {
-          InitializeComponent();
+            InitializeComponent();
         }
 
-     
-     private void grdMascotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-     {
+
+        private void grdMascotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
                 RowIndex = e.RowIndex;
@@ -100,17 +100,17 @@ namespace Veterinaria2
             {
                 MessageBox.Show("Error al seleccionar una fila: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-     }
+        }
         private void cmdCancelar_Click(object sender, EventArgs e)
-    {
-        mtdLimpiar();
-    }
+        {
+            mtdLimpiar();
+        }
 
-    private void bttSalir_Click(object sender, EventArgs e)
-    {
-        this.Close();
-    }
-        
+        private void bttSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void Mascotas_Load_1(object sender, EventArgs e)
         {
@@ -131,12 +131,17 @@ namespace Veterinaria2
 
         private void cmdAnular_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void cmdSalir_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
         }
     }
 

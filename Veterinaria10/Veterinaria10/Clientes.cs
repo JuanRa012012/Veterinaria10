@@ -147,7 +147,7 @@ namespace Veterinaria2
                 txtTelefono.Text = grdClientes.CurrentRow.Cells[4].Value.ToString();
                 txtCorreo.Text = grdClientes.CurrentRow.Cells[5].Value.ToString();
                 txtDireccion.Text = grdClientes.CurrentRow.Cells[6].Value.ToString();
-                
+
                 cmdCancelar.Visible = true;
             }
             catch (Exception ex)
@@ -163,6 +163,26 @@ namespace Veterinaria2
         private void grdClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloEnteros(e);
         }
     }
 }

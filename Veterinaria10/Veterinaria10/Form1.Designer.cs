@@ -114,7 +114,9 @@
             Controls.Add(txtUser);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

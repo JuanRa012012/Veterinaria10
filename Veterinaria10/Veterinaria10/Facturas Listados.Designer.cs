@@ -32,13 +32,13 @@
             cmdNuevaLF = new Button();
             lblListasFacturas = new Label();
             grdListasFacturas = new DataGridView();
-            cmdModificarLF = new Button();
+            cmdAnular = new Button();
             ((System.ComponentModel.ISupportInitialize)grdListasFacturas).BeginInit();
             SuspendLayout();
             // 
             // cmdSalirLF
             // 
-            cmdSalirLF.Location = new Point(391, 400);
+            cmdSalirLF.Location = new Point(512, 398);
             cmdSalirLF.Name = "cmdSalirLF";
             cmdSalirLF.Size = new Size(75, 23);
             cmdSalirLF.TabIndex = 39;
@@ -48,7 +48,7 @@
             // 
             // cmdNuevaLF
             // 
-            cmdNuevaLF.Location = new Point(229, 400);
+            cmdNuevaLF.Location = new Point(350, 398);
             cmdNuevaLF.Name = "cmdNuevaLF";
             cmdNuevaLF.Size = new Size(75, 23);
             cmdNuevaLF.TabIndex = 38;
@@ -67,33 +67,38 @@
             // 
             // grdListasFacturas
             // 
+            grdListasFacturas.BorderStyle = BorderStyle.None;
             grdListasFacturas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             grdListasFacturas.Location = new Point(12, 42);
             grdListasFacturas.Name = "grdListasFacturas";
-            grdListasFacturas.Size = new Size(692, 338);
+            grdListasFacturas.Size = new Size(948, 338);
             grdListasFacturas.TabIndex = 36;
+            grdListasFacturas.CellClick += grdListasFacturas_CellClick;
             // 
-            // cmdModificarLF
+            // cmdAnular
             // 
-            cmdModificarLF.Location = new Point(310, 400);
-            cmdModificarLF.Name = "cmdModificarLF";
-            cmdModificarLF.Size = new Size(75, 23);
-            cmdModificarLF.TabIndex = 40;
-            cmdModificarLF.Text = "Modificar";
-            cmdModificarLF.UseVisualStyleBackColor = true;
-            cmdModificarLF.Click += cmdModificarLF_Click;
+            cmdAnular.Location = new Point(431, 398);
+            cmdAnular.Name = "cmdAnular";
+            cmdAnular.Size = new Size(75, 23);
+            cmdAnular.TabIndex = 41;
+            cmdAnular.Text = "Anular";
+            cmdAnular.UseVisualStyleBackColor = true;
+            cmdAnular.Click += cmdAnular_Click;
             // 
             // Facturas_Listados
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 450);
-            Controls.Add(cmdModificarLF);
+            ClientSize = new Size(972, 433);
+            ControlBox = false;
+            Controls.Add(cmdAnular);
             Controls.Add(cmdSalirLF);
             Controls.Add(cmdNuevaLF);
             Controls.Add(lblListasFacturas);
             Controls.Add(grdListasFacturas);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Facturas_Listados";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Listados de Facturas";
             Load += Facturas_Listados_Load;
             ((System.ComponentModel.ISupportInitialize)grdListasFacturas).EndInit();
@@ -106,6 +111,6 @@
         private Button cmdNuevaLF;
         private Label lblListasFacturas;
         private DataGridView grdListasFacturas;
-        private Button cmdModificarLF;
+        private Button cmdAnular;
     }
 }

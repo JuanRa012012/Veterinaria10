@@ -139,6 +139,7 @@ namespace Veterinaria2
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(221, 23);
             txtNombre.TabIndex = 29;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // label1
             // 
@@ -211,7 +212,9 @@ namespace Veterinaria2
             Controls.Add(label4);
             Controls.Add(txtNombre);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Mascotas";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mascotas";
             Load += Mascotas_Load_1;
             ((System.ComponentModel.ISupportInitialize)grdMascotas).EndInit();

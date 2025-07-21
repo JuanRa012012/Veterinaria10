@@ -98,8 +98,18 @@ namespace Veterinaria2
             if (vrRespuesta == DialogResult.Yes)
             {
                 clsEspeciesConexion.DeleteEspecie(grdListaEspecies, vrIdItemSeleccionado);
-                mtdLimpiar(); 
+                mtdLimpiar();
             }
+        }
+
+        private void txtNombreEspecies_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreEspecies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clsValidaciones.SoloLetras(e);
         }
     }
 }

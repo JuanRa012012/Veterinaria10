@@ -164,6 +164,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(495, 23);
             txtDireccion.TabIndex = 78;
+            txtDireccion.KeyPress += txtDireccion_KeyPress;
             // 
             // lblDireccClientes
             // 
@@ -180,6 +181,7 @@
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(238, 23);
             txtCorreo.TabIndex = 76;
+            txtCorreo.KeyPress += txtCorreo_KeyPress;
             // 
             // lblCorreoCliente
             // 
@@ -196,6 +198,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(221, 23);
             txtTelefono.TabIndex = 74;
+            txtTelefono.KeyPress += txtTelefono_KeyPress;
             // 
             // lblTelefonoClientes
             // 
@@ -212,6 +215,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(221, 23);
             txtNombre.TabIndex = 72;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // lblNombreCliente
             // 
@@ -247,7 +251,9 @@
             Controls.Add(lblTelefonoClientes);
             Controls.Add(txtNombre);
             Controls.Add(lblNombreCliente);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Clientes";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Clientes";
             Load += Clientes_Load_1;
             ((System.ComponentModel.ISupportInitialize)grdClientes).EndInit();
