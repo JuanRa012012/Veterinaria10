@@ -9,7 +9,7 @@ namespace Veterinaria2
 {
     internal class clsLoginV
     {
-        clsConexion clsconexion = new clsConexion();
+        clsConexion conexion = new clsConexion();
 
         /// <summary>
         /// Valida un usuario por nombre y contraseña.
@@ -22,7 +22,7 @@ namespace Veterinaria2
         {
             rol = "";
 
-            using (SqlConnection conn = new SqlConnection(lsconexion))
+            using (SqlConnection conn = new SqlConnection(conexion.cadena))
             {
                 conn.Open();
                 string query = "SELECT Rol FROM UsuarioSistema WHERE Nombre = @Nombre AND Contraseña = @Contraseña AND Estado = 'Activo'";

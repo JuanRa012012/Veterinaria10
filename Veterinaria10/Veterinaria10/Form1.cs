@@ -23,8 +23,13 @@ namespace Veterinaria10
 
         private void button3_Click(object sender, EventArgs e)
         {
-           Admin form = new Admin();
+            Admin form = new Admin();
             form.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

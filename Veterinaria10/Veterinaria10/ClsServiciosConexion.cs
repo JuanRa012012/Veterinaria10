@@ -20,7 +20,7 @@ namespace Veterinaria2
         {
             try
             {
-                da = new SqlDataAdapter("SELECT ID, NOMBRESERVICIO, PRECIO FROM SERVICIO WHERE ESTADO = 1", clsConexion.sc);
+                da = new SqlDataAdapter("SELECT ID, NOMBRE, PRECIO FROM SERVICIO WHERE ESTADO = 1", clsConexion.sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -35,7 +35,7 @@ namespace Veterinaria2
         {
             try
             {
-                da = new SqlDataAdapter("SELECT ID, NOMBRESERVICIO, PRECIO FROM SERVICIO WHERE NOMBRESERVICIO LIKE '%" + vrBuscar + "%' AND ESTADO = 1", clsConexion.sc);
+                da = new SqlDataAdapter("SELECT ID, NOMBRE, PRECIO FROM SERVICIO WHERE NOMBRESERVICIO LIKE '%" + vrBuscar + "%' AND ESTADO = 1", clsConexion.sc);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
